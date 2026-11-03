@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SplitSpark</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2f4fb;color:#172041;font:17px system-ui}main{max-width:550px;margin:auto;padding:32px 20px}section{background:white;border-radius:20px;padding:24px;box-shadow:0 8px 30px #17204112}label,input,button{display:block;width:100%;margin-block:8px}input,button{font:inherit;padding:12px;border-radius:10px;border:1px solid #9da5bc}button{background:#243b90;color:white;cursor:pointer}button:disabled{opacity:.5}a{color:#243b90}li{margin-bottom:12px}p{overflow-wrap:anywhere}
+</style>
+<main><h1>SplitSpark</h1><p>Split a bill. Share each person's NIM request.</p><section>
+<form id="split"><label>Total in NIM<input name="total" inputmode="decimal" required placeholder="30.00"></label><label>People, including you<input name="people" type="number" min="2" max="50" required value="3"></label><label>Your public Nimiq address<input name="recipient" required autocomplete="off"></label><button>Create requests</button></form>
+<div id="request" hidden><h2 id="amount"></h2><p id="recipient"></p><button id="pay">Review in Nimiq Pay</button><a href="./">Create a new split</a></div>
+<p id="status" role="status"></p><ol id="links"></ol></section></main><script type="module" src="./main.js"></script></html>
